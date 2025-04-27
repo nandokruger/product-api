@@ -70,7 +70,7 @@ php artisan migrate
 
 ## 🛠️ Tecnologias
 
-- **Laravel 10** - Framework PHP para desenvolvimento web  
+- **Laravel 12** - Framework PHP para desenvolvimento web  
 - **Eloquent ORM** - Camada de acesso a dados do Laravel  
 - **Repository Pattern** - Padrão para isolamento da lógica de banco  
 - **Postman** - Ferramenta para testes e documentação de APIs  
