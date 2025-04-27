@@ -50,13 +50,13 @@ php artisan migrate
 
 ## 🔍 Endpoints
 
-| Método   | URL                  | Descrição                     |
-|----------|----------------------|-------------------------------|
-| `GET`    | `/api/products`      | Lista todos os produtos       |
-| `GET`    | `/api/products/{id}` | Busca produto por ID          |
-| `POST`   | `/api/products`      | Cria novo produto             |
-| `PUT`    | `/api/products/{id}` | Atualiza produto existente    |
-| `DELETE` | `/api/products/{id}` | Remove produto                |
+| Método   | URL                     | Descrição                     |
+|----------|-------------------------|-------------------------------|
+| `GET`    | `/api/v1/products`      | Lista todos os produtos       |
+| `GET`    | `/api/v1/products/{id}` | Busca produto por ID          |
+| `POST`   | `/api/v1/products`      | Cria novo produto             |
+| `PUT`    | `/api/v1/products/{id}` | Atualiza produto existente    |
+| `DELETE` | `/api/v1/products/{id}` | Remove produto                |
 
 **Exemplo de Request (POST):**
 ```json
