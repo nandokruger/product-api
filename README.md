@@ -134,11 +134,6 @@ classDiagram
         +countProducts()
     }
     
-    class ProductRepositoryFactory {
-        +createRepository()
-        +getRepository()
-    }
-    
     class Product {
         +id
         +name
@@ -149,8 +144,5 @@ classDiagram
     ProductService --> ProductRepositoryInterface : depende
     ProductService --> Product : manipula
     ProductRepository ..|> ProductRepositoryInterface : implementa
-    ProductRepositoryFactory --> ProductRepositoryInterface : cria
-    ProductService --> ProductRepositoryFactory : obtém repositório
-
 ```
 
