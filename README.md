@@ -90,4 +90,60 @@ app/
 config/             # Configurações da aplicação
 database/           # Migrations
 routes/             # Definição de endpoints
+```
+## 🧩 Diagrama UML
+
+```mermaid
+classDiagram
+    %% Controlador
+    class ProductController {
+        +index(): ProductResponse[]
+        +show(id): ProductResponse
+        +store(request): ProductResponse
+        +update(id, request): ProductResponse
+        +destroy(id): void
+    }
+
+    %% Serviço
+    class ProductService {
+        +getAllProducts(): Product[]
+        +getProductById(id): Product
+        +createProduct(request): Product
+        +updateProduct(id, request): Product
+        +deleteProduct(id): void
+    }
+
+    %% Repositório (Interface)
+    class ProductRepository {
+        +findAll(): Product[]
+        +findById(id): Product
+        +save(product): Product
+        +delete(id): void
+    }
+
+    %% Repositório Eloquent (Implementação)
+    class EloquentProductRepository {
+        +findAll(): Product[]
+        +findById(id): Product
+        +save(product): Product
+        +delete(id): void
+    }
+
+    %% Entidade
+    class Product {
+        +id: UUID
+        +name: String
+        +price: Decimal
+        +categoryId: UUID
+        +supplierId: UUID
+    }
+
+    %% Relacionamentos
+    ProductController --> ProductService : usa
+    ProductService --> ProductRepository : depende
+    EloquentProductRepository ..|> ProductRepository : implementa
+    ProductService --> Product : manipula
+
+
+```
 
