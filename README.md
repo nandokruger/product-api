@@ -1,4 +1,4 @@
-# Projeto Bootcamp Arquiteto(a) de Software (XP Educação)
+# Projeto Bootcamp Pós Graduação Arquiteto(a) de Software (XP Educação)
 
 [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
