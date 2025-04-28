@@ -1,9 +1,10 @@
-# 🛍️ API de Produtos
+# Projeto Bootcamp Arquiteto(a) de Software (XP Educação)
 
 [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 
 API RESTful para gerenciamento de produtos desenvolvida em Laravel, seguindo os princípios de **Clean Architecture** e **Repository Pattern**.
+
 
 ## ✨ Funcionalidades
 
@@ -65,7 +66,7 @@ php artisan migrate
     "price": 1999.90,
     "description": "Modelo XYZ, 128GB"
 }
-});
+
 ```
 
 ## 🛠️ Tecnologias
