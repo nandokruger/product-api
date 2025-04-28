@@ -95,55 +95,62 @@ routes/             # Definição de endpoints
 
 ```mermaid
 classDiagram
-    %% Controlador
     class ProductController {
-        +index(): ProductResponse[]
-        +show(id): ProductResponse
-        +store(request): ProductResponse
-        +update(id, request): ProductResponse
-        +destroy(id): void
+        +index()
+        +show(id)
+        +store(request)
+        +update(request, id)
+        +destroy(id)
+        +findByName(name)
+        +count()
     }
-
-    %% Serviço
+    
     class ProductService {
-        +getAllProducts(): Product[]
-        +getProductById(id): Product
-        +createProduct(request): Product
-        +updateProduct(id, request): Product
-        +deleteProduct(id): void
+        +getAllProducts()
+        +getProductById(id)
+        +createProduct(request)
+        +updateProduct(id, request)
+        +deleteProduct(id)
     }
-
-    %% Repositório (Interface)
+    
+    class ProductRepositoryInterface {
+        <<interface>>
+        +getAllProducts()
+        +getProductById(id)
+        +getProductsByName(name)
+        +deleteProduct(id)
+        +createProduct(product)
+        +updateProduct(product)
+        +countProducts()
+    }
+    
     class ProductRepository {
-        +findAll(): Product[]
-        +findById(id): Product
-        +save(product): Product
-        +delete(id): void
+        +getAllProducts()
+        +getProductById(id)
+        +getProductsByName(name)
+        +deleteProduct(id)
+        +createProduct(product)
+        +updateProduct(product)
+        +countProducts()
     }
-
-    %% Repositório Eloquent (Implementação)
-    class EloquentProductRepository {
-        +findAll(): Product[]
-        +findById(id): Product
-        +save(product): Product
-        +delete(id): void
+    
+    class ProductRepositoryFactory {
+        +createRepository()
+        +getRepository()
     }
-
-    %% Entidade
+    
     class Product {
-        +id: UUID
-        +name: String
-        +price: Decimal
-        +categoryId: UUID
-        +supplierId: UUID
+        +id
+        +name
+        +price
     }
-
-    %% Relacionamentos
+    
     ProductController --> ProductService : usa
-    ProductService --> ProductRepository : depende
-    EloquentProductRepository ..|> ProductRepository : implementa
+    ProductService --> ProductRepositoryInterface : depende
     ProductService --> Product : manipula
-
+    ProductRepository ..|> ProductRepositoryInterface : implementa
+    ProductRepositoryFactory --> ProductRepositoryInterface : cria
+    ProductService --> ProductRepositoryFactory : obtém repositório
 
 ```
 
