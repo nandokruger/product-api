@@ -87,6 +87,7 @@ classDiagram
     class Product {
         +id
         +name
+        +description
         +price
     }
     
