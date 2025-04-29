@@ -24,7 +24,6 @@ A solução segue o padrão MVC (Model‑View‑Controller) estendido por camada
 
 **Repository:** Abstrai o acesso a dados, isolando a lógica de persistência (Eloquent ORM).
 
-**DTO**: Estruturas para validação e transporte de dados entre camadas.
 
 ### 2.2 Diagrama de Componentes (C4)
 
@@ -216,7 +215,7 @@ Nesta seção, é apresentada uma reflexão sobre a experiência no Desafio Fina
 
 Para a implementação da **product-api**, foram utilizados conhecimentos adquiridos no Bootcamp de Arquiteto(a) de Software, tais como:
 
-- Aplicação dos padrões arquiteturais **MVC** e **Clean Architecture**, organizando o código em **Controllers**, **Services**, **Repositories** e **DTOs**.
+- Aplicação dos padrões arquiteturais **MVC** e **Clean Architecture**, organizando o código em **Controllers**, **Services** e **Repositories** e **DTOs**.
 - Utilização do **Repository Pattern** para isolar a lógica de persistência e facilitar testes.
 - Uso do **Eloquent ORM** e **migrations** do **Laravel 12** para gestão de banco de dados.
 - Validação de dados via **DTOs** para garantir consistência e segurança nas operações.
