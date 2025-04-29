@@ -249,7 +249,7 @@ Para aprimorar a solução, são sugeridas as seguintes melhorias:
 - Desenvolvimento de testes de integração e unitários, validando o fluxo entre camadas e facilitando a identificação de acoplamentos indevidos.
 - Implementação de autenticação e autorização (**Passport**, **Sanctum**) para controle de acesso.
 - Monitoramento de métricas e logs (**Laravel Telescope** ou ferramentas externas) para observabilidade.
-- Implementação e integração de outras entidades, como **fornecedores** e **categorias**.
+- Ampliação da API para suportar novas entidades de domínio, como categorias, fornecedores e pedidos, implementando endpoints CRUD dedicados, modelagem de relacionamentos e regras de validação específicas para cada recurso, garantindo coesão e integridade no fluxo de dados.
 
 
 ## 🚀 Instalação
