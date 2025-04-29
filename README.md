@@ -125,8 +125,6 @@ routes/             # Definição de endpoints
 
 - **app/Controllers:** Mapeia as rotas REST e retorna respostas JSON.
 
-- **app/DTOs:** Define estruturas para criação e atualização de produtos, garantindo validações consistentes.
-
 - **app/Models:** Contém a classe Product com atributos e relacionamentos.
 
 - **app/Repositories:** Implementa ProductRepositoryInterface e ProductRepository usando Eloquent.
